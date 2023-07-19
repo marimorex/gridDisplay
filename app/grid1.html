@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    canvas {
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+<canvas id="grid" width="1200" height="600"></canvas>
+
+<script>
+    const canvas = document.getElementById("grid");
+    const ctx = canvas.getContext("2d");
+
+    const cellSize = 50;
+    const rows = 12;
+    const cols = 24;
+
+    // Draw the grid
+    function drawGrid() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      ctx.beginPath();
+      for (let x = 0; x <= canvas.width; x += cellSize) {
+        ctx.moveTo(x, 0);
+        ctx.lineTo(x, canvas.height);
+      }
+      for (let y = 0; y <= canvas.height; y += cellSize) {
+        ctx.moveTo(0, y);
+        ctx.lineTo(canvas.width, y);
+      }
+      ctx.strokeStyle = "black";
+      ctx.lineWidth = 1;
+      ctx.stroke();
+    }
+
+    // Handle click events on the canvas
+    function handleClick(event) {
+      const rect = canvas.getBoundingClientRect();
+      const x = Math.floor((event.clientX - rect.left) / cellSize);
+      const y = Math.floor((event.clientY - rect.top) / cellSize);
+
+      const cellValue = prompt("Enter a character:"); // Prompt user for a character
+
+      ctx.font = "20px Arial";
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+      ctx.fillText(cellValue, x * cellSize + cellSize / 2, y * cellSize + cellSize / 2);
+    }
+
+    // Get a row by the left
+    function getRowByLeft(row) {
+      const rowData = [];
+      for (let col = 0; col < cols; col++) {
+        const cellValue = ctx.measureText(ctx.fillText("", 0, 0)).width === 0 ? "" : ctx.fillText("", 0, 0).width;
+        rowData.push(cellValue);
+      }
+      return rowData;
+    }
+
+    // Get a row by the right
+    function getRowByRight(row) {
+      const rowData = [];
+      for (let col = 0; col < cols; col++) {
+        const cellValue = ctx.measureText(ctx.fillText("", 0, 0)).width === 0 ? "" : ctx.fillText("", 0, 0).width;
+        rowData.unshift(cellValue);
+      }
+      return rowData;
+    }
+
+    // Attach click event listener to the canvas
+    canvas.addEventListener("click", handleClick);
+
+    drawGrid();
+  </script>
+</body>
+</html>

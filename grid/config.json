@@ -1,0 +1,13 @@
+{
+  "display": {
+    "canvas": {
+      "height": 400,
+      "width": 200,
+      "cell_size": 20,
+      "rows": 12,
+      "columns": 24,
+      "font_value": "20px Arial",
+      "font_label": "15px Arial"
+    }
+  }
+}
