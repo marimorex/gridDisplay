@@ -4,22 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b54a9fa9-ad40-4d59-91e9-a87e510dc56a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/grid1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/grid2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grid/config.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grid/display.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grid/display.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grid/grid4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grid2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grid3.html" afterDir="false" />
-    </list>
+    <list default="true" id="b54a9fa9-ad40-4d59-91e9-a87e510dc56a" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
